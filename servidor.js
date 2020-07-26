@@ -43,6 +43,14 @@ server.get('/acamica/:comision/alumnos/:id', (req, res) => {
 server.delete('/acamica/:comision/alumnos/:id', (req, res) => {
     let data = req.params
     let result = deleteUser(data)
+    let alumnos = users.getUsers()
+    for (let i = 0; i < alumnos.length; i++) {
+        if ((alumnos[i].id == data.id) && (alumnos[i].comision == data.comision)) {
+            let alumno = alumnos[i]
+            console.log(alumno)
+        }
+    }
+    console.log(result)
 })
 
 server.listen(3000, ()=>{

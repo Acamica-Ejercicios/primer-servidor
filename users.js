@@ -65,8 +65,12 @@ function getUsersByComision(data){
 }
 
 function getUsersByComisionAndId(data){
-    let users = alumnos.filter(a => (a.comision == data.comision) && (a.id == data.id))
-    return users
+    for (let i = 0; i < alumnos.length; i++) {
+        if ((alumnos[i].id == data.id) && (alumnos[i].comision == data.comision)) {
+            let alumno = alumnos[i]
+            return alumno
+        }
+    }
 }
 
 function deleteUser(data){
