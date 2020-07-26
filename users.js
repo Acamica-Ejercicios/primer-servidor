@@ -54,3 +54,35 @@ const alumnos = [
         comision: 'bigdata'
     }
 ];
+
+function getUsers(){
+    return alumnos
+}
+
+function getUsersByComision(data){
+    let users = alumnos.filter(a => a.comision == data.comision);
+    return users
+}
+
+function getUsersByComisionAndId(data){
+    let users = alumnos.filter(a => (a.comision == data.comision) && (a.id == data.id))
+    return users
+}
+
+function deleteUser(data){
+    let user = alumnos.filter(a => (a.comision == data.comision) && (a.id == data.id))
+}
+
+module.exports = {
+    getUsers: getUsers,
+    getUsersByComision: getUsersByComision,
+    getUsersByComisionAndId: getUsersByComisionAndId,
+    deleteUser: deleteUser
+}
+
+let usuarioBorrado = {
+    id: 6,
+    nombre: 'Lucas',
+    apellido: 'Suarez',
+    comision: 'dwa'
+}
