@@ -75,6 +75,7 @@ function getUsersByComisionAndId(data){
 
 function deleteUser(data){
     let user = alumnos.filter(a => (a.comision == data.comision) && (a.id == data.id))
+    return user 
 }
 
 module.exports = {

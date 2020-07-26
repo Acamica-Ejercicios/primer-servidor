@@ -42,15 +42,19 @@ server.get('/acamica/:comision/alumnos/:id', (req, res) => {
 
 server.delete('/acamica/:comision/alumnos/:id', (req, res) => {
     let data = req.params
-    let result = deleteUser(data)
-    let alumnos = users.getUsers()
-    for (let i = 0; i < alumnos.length; i++) {
-        if ((alumnos[i].id == data.id) && (alumnos[i].comision == data.comision)) {
-            let alumno = alumnos[i]
-            console.log(alumno)
-        }
-    }
+    let result = users.deleteUser(data)
+
     console.log(result)
+    res.send('algo')
+})
+
+server.use((err, req, res, next)=>{
+    if(!err){
+        return next()
+    }else {
+        console.log(err.message)
+        res.status(500).send('Se ha producido un error inesperado')
+    }
 })
 
 server.listen(3000, ()=>{
