@@ -1,7 +1,6 @@
 {
   "name": "dos",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +9,17 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "moment": "^2.27.0",
     "nodemon": "^2.0.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Acamica-Ejercicios/primer-servidor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Acamica-Ejercicios/primer-servidor/issues"
+  },
+  "homepage": "https://github.com/Acamica-Ejercicios/primer-servidor#readme",
+  "description": ""
 }

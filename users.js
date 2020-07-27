@@ -74,20 +74,26 @@ function getUsersByComisionAndId(data){
 }
 
 function deleteUser(data){
-    let user = alumnos.filter(a => (a.comision == data.comision) && (a.id == data.id))
-    return user 
+    for (let i = 0; i < alumnos.length; i++) {
+        if((alumnos[i].id == data.id) && (alumnos[i].comision == data.comision)){
+            let alumno = alumnos[i]
+            let index = alumnos.indexOf(alumno)
+            alumnos.splice(index, 1)
+            return 'ok'
+        }
+    } 
+}
+
+function addUserAlumno (data) {
+    //id, nombre, apellido,comision
+    alumnos.push(data)
+    return "ok"
 }
 
 module.exports = {
     getUsers: getUsers,
     getUsersByComision: getUsersByComision,
     getUsersByComisionAndId: getUsersByComisionAndId,
-    deleteUser: deleteUser
-}
-
-let usuarioBorrado = {
-    id: 6,
-    nombre: 'Lucas',
-    apellido: 'Suarez',
-    comision: 'dwa'
+    deleteUser: deleteUser,
+    addUserAlumno: addUserAlumno
 }
