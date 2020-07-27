@@ -3,7 +3,6 @@ const server = express()
 const users = require("./users")
 const middlewares = require('./middlewares')
 const isEmpty = require('is-empty-object')
-const { validatePost } = require('./middlewares')
 
 server.use(express.json())
 server.use(middlewares.agregarLogs)
@@ -21,7 +20,7 @@ server.get("/acamica/:comision/alumnos", (req, res)=>{
     if(!isEmpty(query)){
         let filter = result.filter(a => a.nombre == query.nombre)
         if(filter < 1){
-            res.status(404).send('No se encotró alumno con ese nombre en la comisión seleccionada')
+            res.status(404).send('No se encontró alumno con ese nombre en la comisión seleccionada')
         }
         res.status(200)
         res.json(filter)
@@ -41,7 +40,7 @@ server.get('/acamica/:comision/alumnos/:id', (req, res) => {
     if(result < 1){
         res.status(404).send('No se encontró al alumno')
     }
-    res.status(404)
+    res.status(200)
     res.json(result)
 })
 
@@ -49,18 +48,9 @@ server.delete('/acamica/:comision/alumnos/:id', (req, res) => {
     let data = req.params
     let result = users.deleteUser(data)
     if(result == 'ok'){
-        res.status(200).send('usuario eliminado con éxcito')
+        res.status(200).send('usuario eliminado con éxito')
     }
     res.status(404).send('Usuario no exsite')
-})
-
-server.use((err, req, res, next)=>{
-    if(!err){
-        return next()
-    }else {
-        console.log(err.message)
-        res.status(500).send('Se ha producido un error inesperado')
-    }
 })
 
 server.post('/newusers', middlewares.validatePost,middlewares.validateExistingUSer, (req, res) =>{
@@ -70,6 +60,15 @@ server.post('/newusers', middlewares.validatePost,middlewares.validateExistingUS
         res.status(200).send(data)
     } else {
         throw new Error ('No se ha podido crear el usuario')
+    }
+})
+
+server.use((err, req, res, next)=>{
+    if(!err){
+        return next()
+    }else {
+        console.log(err.message)
+        res.status(500).send('Se ha producido un error inesperado')
     }
 })
 
