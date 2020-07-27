@@ -2,6 +2,8 @@ const express = require('express')
 const server = express()
 const users = require("./users")
 const middlewares = require('./middlewares')
+const isEmpty = require('is-empty-object')
+const { validatePost } = require('./middlewares')
 
 server.use(express.json())
 server.use(middlewares.agregarLogs)
@@ -16,7 +18,7 @@ server.get("/acamica/:comision/alumnos", (req, res)=>{
     let data = req.params
     let query = req.query
     let result = users.getUsersByComision(data)
-    if(query > 0){
+    if(!isEmpty(query)){
         let filter = result.filter(a => a.nombre == query.nombre)
         if(filter < 1){
             res.status(404).send('No se encotró alumno con ese nombre en la comisión seleccionada')
@@ -61,7 +63,7 @@ server.use((err, req, res, next)=>{
     }
 })
 
-server.post('/newusers', (req, res) =>{
+server.post('/newusers', middlewares.validatePost,middlewares.validateExistingUSer, (req, res) =>{
     let data = req.body
     let result = users.addUserAlumno(data)
     if(result == 'ok'){

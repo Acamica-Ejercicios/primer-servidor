@@ -1,66 +1,58 @@
 
-26/07/2020 05:39:12
-Ruta accedida:/acamica/alumnos
 
-26/07/2020 05:39:37
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:07:55
+Ruta accedida: /newusers 
 
-26/07/2020 05:40:00
-Ruta accedida:/acamica/bigdata/alumnos
+27/07/2020 12:08:06
+Ruta accedida: /newusers 
 
-26/07/2020 05:40:58
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:08:10
+Ruta accedida: /newusers 
 
-26/07/2020 05:41:12
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:09:52
+Ruta accedida: /newusers 
 
-26/07/2020 05:41:34
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:10:09
+Ruta accedida: /newusers 
 
-26/07/2020 05:41:53
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:10:37
+Ruta accedida: /newusers 
 
-26/07/2020 05:42:29
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:11:05
+Ruta accedida: /newusers 
 
-26/07/2020 05:42:34
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:11:15
+Ruta accedida: /newusers 
 
-26/07/2020 05:43:06
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:11:26
+Ruta accedida: /newusers 
 
-26/07/2020 05:43:32
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:20:38
+Ruta accedida: /newusers 
 
-26/07/2020 05:44:07
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:20:47
+Ruta accedida: /newusers 
 
-26/07/2020 05:45:17
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:20:58
+Ruta accedida: /newusers 
 
-26/07/2020 05:45:43
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:21:55
+Ruta accedida: /newusers 
 
-26/07/2020 05:45:57
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:22:09
+Ruta accedida: /newusers 
 
-26/07/2020 05:46:13
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:22:30
+Ruta accedida: /newusers 
 
-26/07/2020 05:46:24
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:22:32
+Ruta accedida: /newusers 
 
-26/07/2020 05:46:48
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:22:33
+Ruta accedida: /newusers 
 
-26/07/2020 05:47:25
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:22:38
+Ruta accedida: /newusers 
 
-26/07/2020 05:47:39
-Ruta accedida:/acamica/dwa/alumnos
-
-26/07/2020 05:48:04
-Ruta accedida:/acamica/dwa/alumnos
-
-26/07/2020 05:48:09
-Ruta accedida:/acamica/dwa/alumnos
+27/07/2020 12:22:51
+Ruta accedida: /acamica/alumnos 
